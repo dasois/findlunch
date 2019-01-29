@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mariadb-docker-container:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=nothing
+      - MYSQL_DATABASE=findlunch
+      - MYSQL_USER=db_findlunch_service
+      - MYSQL_PASSWORD=LT>r71VGWS
+    ports:
+      - 3306:3306
+    volumes:
+      - /data/mysql
+      - ../database/FindLunch_v5.sql:/docker-entrypoint-initdb.d/1FindLunch_v5.sql
+      - ../database/data_v5.sql:/docker-entrypoint-initdb.d/2data_v5.sql
+    restart: always
+  findlunch-app:
+    image: findlunch-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mariadb-docker-container
+    ports:
+      - 8443:8443
+    volumes:
+      - /data/spring-boot-app
+    restart: always

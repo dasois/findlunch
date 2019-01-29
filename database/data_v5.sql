@@ -75,36 +75,36 @@ INSERT IGNORE INTO `findlunch`.`course_types` (`id`, `restaurant_id`, `name`, `s
 
 -- User Data
 INSERT IGNORE INTO `findlunch`.`user` (`id`, `username`, `password`, `restaurant_id`, `user_type_id`, `account_id`) VALUES
-(1, 'admin@admin.com', '$2a$10$Wo0WJitsLCrhuY4LJoOFRO.xfAWvTVuB8ktPZCqx1lFi67XnIimd6', NULL, 1, NULL),
-(2, 'user@user.de', '$2a$10$mkHTGZbKAMRsC54cH6kOYenXTnk4vFOTBQBFYgrQsJ7hkL3oClFSC', NULL, 2, NULL),
-(3, 'owner@owner.com', '$2a$10$TlzzmKRGrRe/KzPUp111Ue0i.jMm.6uk5b62NCoL6N5DNZEmLkqFa', NULL, 3, 1),
-(4, 'fh@fh.com', '$2a$10$TlzzmKRGrRe/KzPUp111Ue0i.jMm.6uk5b62NCoL6N5DNZEmLkqFa', 11, 1, 2),
-(5, 'mellow@mellow.com', '$2a$10$1ALnrR/Wd/2dRLE7Kq8Gy.o.EyfPriBI6LB/ICae2DrHpHzgCNkVe', 12, 1, 3),
-(6, 'soon@soon.com', '$2a$10$0T975lF3u9yG/rdBdsZL/uA5HBcx49W4OF8jaVMUKNbQdtnw2i7Zu', 13, 1, 4),
-(8, 'a@a.com', '$2a$10$4AjQi77uMdNczVoma.zdWubOlOgot.LHvraZOV0ILo/srOH639DTq', NULL, 2, NULL),
-(9, 'deniz@deniz.com', '$2a$10$JqPp8yWlIq4YYAHQ38NnKunWlGd1G7oQG1oe3njjyeVTdKvD4ULUe', NULL, 2, NULL),
-(10, 'tom@tom.com', '$2a$10$wz4cYgRAo91l/rP7pT6i2uOjOrVG1YQ1YVZwLU7mQF8.EBBHJ9Kfi', NULL, 2, NULL),
-(101, 'restaurant@ionic.com', '$2a$10$AM5MLDZLCINLkGqWSQdIkeI/RR2DzlIWXP8UMLmJTNfjnrBFO7meu', 101, 1, 101),
-(100, 'ionic@ionic.com', '$2a$10$AM5MLDZLCINLkGqWSQdIkeI/RR2DzlIWXP8UMLmJTNfjnrBFO7meu', NULL, 2, NULL);
+(1, 'admin@admin.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 1, NULL),
+(2, 'user@user.de', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 2, NULL),
+(3, 'owner@owner.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 3, 1),
+(4, 'fh@fh.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', 11, 1, 2),
+(5, 'mellow@mellow.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', 12, 1, 3),
+(6, 'soon@soon.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', 13, 1, 4),
+(8, 'a@a.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 2, NULL),
+(9, 'deniz@deniz.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 2, NULL),
+(10, 'tom@tom.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 2, NULL),
+(101, 'restaurant@ionic.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', 101, 1, 101),
+(100, 'ionic@ionic.com', '$2a$10$5nS0Hkv7FdQP6i5dqHuR6Oas/mULdzXk3bdZJtDVmQ8AbOgb4u/hK', NULL, 2, NULL);
 
 -- offer
 INSERT IGNORE INTO `findlunch`.`offer` (`id`, `restaurant_id`, `course_type`, `title`, `description`, `price`, `preparation_time`, `start_date`, `end_date`, `needed_points`) VALUES
-(1, 11, 1,'Champignonreispfanne (Tg1) ', 'vegan', '1.00', 2, '2017-01-08', '2017-08-31', 30),
-(2, 11, 1, 'Hackbällchen mit Paprikasauce (Tg3)', 'Rindfleisch und Schweinefleisch', '1.90', 4, '2017-01-08', '2017-08-31', 35),
-(3, 11, 1, 'Pfannkuchen mit Schokosauce (Tg2)', 'fleischlos', '1.59', 3, '2017-01-08', '2017-08-31', 25),
-(4, 11, 1, 'Putengulasch (Tg4) ', 'Putenfleisch', '2.40', 5, '2017-01-08', '2017-08-31', 37),
-(5, 12, 1, 'Country Potatoes', 'Knusprige Countrypotatoes mit Sourcreamdip', '4.90', 5, '2017-01-08', '2017-08-31', 40),
-(6, 12, 1, 'Feurige Bohnen', 'Chili con Carne, der leckere texanische Eintopf)', '4.50', 6, '2017-01-08', '2017-08-31', 38),
-(7, 12, 1, 'Fleischpflanzerlsemmel', 'Frisch', '2.50', 3, '2017-01-08', '2017-08-31', 23),
-(8, 12, 1, 'Wiener mit Semmel oder Kartoffelsalat', 'klein', '2.90', 2, '2017-01-08', '2017-08-31', 15),
-(9, 12, 1, 'Wiener mit Semmel oder Kartoffelsalat ', 'groß', '4.00', 5, '2017-01-08', '2017-08-31', 30),
-(10, 13, 1, 'Butterbreze', 'mit Salz', '1.10', 1, '2017-01-08', '2017-08-31', 10),
-(11, 13, 1, 'Früchtetee', 'mit Himbeeren und Erdbeeren', '1.30', 2, '2017-01-08', '2017-08-31', 15),
-(12, 13, 1, 'Nussschnecke', 'jeden Tag frisch', '1.80', 1, '2017-01-08', '2017-08-31', 20),
-(13, 13, 1, 'Schwarzer Kaffe', 'aus Brasilien', '1.00', 1, '2017-01-08', '2017-08-31', 8),
-(101, 101, 4, 'Schwarzer Kaffe', 'aus Brasilien', '1.00', 1, '2017-01-08', '2017-08-31', 8),
-(102, 101, 2, 'Wiener mit Semmel oder Kartoffelsalat', 'klein', '2.90', 2, '2017-01-08', '2017-08-31', 15),
-(103, 101, 1, 'Fleischpflanzerlsemmel', 'Frisch', '2.50', 3, '2017-01-08', '2017-08-31', 23);
+(1, 11, 1,'Champignonreispfanne (Tg1) ', 'vegan', '1.00', 2, '2019-01-08', '2019-08-31', 30),
+(2, 11, 1, 'Hackbällchen mit Paprikasauce (Tg3)', 'Rindfleisch und Schweinefleisch', '1.90', 4, '2019-01-08', '2019-08-31', 35),
+(3, 11, 1, 'Pfannkuchen mit Schokosauce (Tg2)', 'fleischlos', '1.59', 3, '2019-01-08', '2019-08-31', 25),
+(4, 11, 1, 'Putengulasch (Tg4) ', 'Putenfleisch', '2.40', 5, '2019-01-08', '2019-08-31', 37),
+(5, 12, 1, 'Country Potatoes', 'Knusprige Countrypotatoes mit Sourcreamdip', '4.90', 5, '2019-01-08', '2019-08-31', 40),
+(6, 12, 1, 'Feurige Bohnen', 'Chili con Carne, der leckere texanische Eintopf)', '4.50', 6, '2019-01-08', '2019-08-31', 38),
+(7, 12, 1, 'Fleischpflanzerlsemmel', 'Frisch', '2.50', 3, '2019-01-08', '2019-08-31', 23),
+(8, 12, 1, 'Wiener mit Semmel oder Kartoffelsalat', 'klein', '2.90', 2, '2019-01-08', '2019-08-31', 15),
+(9, 12, 1, 'Wiener mit Semmel oder Kartoffelsalat ', 'groß', '4.00', 5, '2019-01-08', '2019-08-31', 30),
+(10, 13, 1, 'Butterbreze', 'mit Salz', '1.10', 1, '2019-01-08', '2019-08-31', 10),
+(11, 13, 1, 'Früchtetee', 'mit Himbeeren und Erdbeeren', '1.30', 2, '2019-01-08', '2019-08-31', 15),
+(12, 13, 1, 'Nussschnecke', 'jeden Tag frisch', '1.80', 1, '2019-01-08', '2019-08-31', 20),
+(13, 13, 1, 'Schwarzer Kaffe', 'aus Brasilien', '1.00', 1, '2019-01-08', '2019-08-31', 8),
+(101, 101, 4, 'Schwarzer Kaffe', 'aus Brasilien', '1.00', 1, '2019-01-08', '2019-08-31', 8),
+(102, 101, 2, 'Wiener mit Semmel oder Kartoffelsalat', 'klein', '2.90', 2, '2019-01-08', '2019-08-31', 15),
+(103, 101, 1, 'Fleischpflanzerlsemmel', 'Frisch', '2.50', 3, '2019-01-08', '2019-08-31', 23);
 
 -- offer has day
 INSERT IGNORE INTO `findlunch`.`offer_has_day_of_week` (`offer_id`, `day_of_week_id`) VALUES
